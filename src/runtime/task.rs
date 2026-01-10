@@ -5,7 +5,7 @@ pub struct Task {
 }
 impl Task {
     pub fn new(T:Box<dyn FnOnce()>) -> Task{
-        let a = Task{ Job: Box::new(T)};
+        let a = Task{ Job: T};
 
         a
     }
